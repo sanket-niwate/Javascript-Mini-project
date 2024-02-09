@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        width: 300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 8px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      button {
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" />
+
+      <button type="button" onclick="authenticate()">Login</button>
+    </form>
+
+    <script>
+      function authenticate() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Simulate a simple authentication (replace this with your actual authentication logic)
+        if (username === "admin" && password === "password") {
+          alert("Login successful!");
+          window.location.href = "/T/emp/emp.html"; // Redirect to employee management page
+        } else {
+          alert("Invalid credentials. Please try again.");
+        }
+      }
+    </script>
+  </body>
+</html>
